@@ -4,7 +4,14 @@ import purgecss from "vite-plugin-purgecss";
 export default defineConfig({
   plugins: [
     purgecss({
-      content: ["./index.html", "./main.js"],
+      content: ["./index.html", "./main.js", "./public/**/*.html"],
+      safelist: [
+        /^proyectos-grid/,
+        /^proyecto/,
+        /^descripcion/,
+        /^perfil-foto/,
+        /^educacion-experiencia-lista/,
+      ],
     }),
   ],
   css: {
