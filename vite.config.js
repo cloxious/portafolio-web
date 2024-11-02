@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import purgecss from "vite-plugin-purgecss";
 
 export default defineConfig({
+  base: "/portafolio-web/",
   plugins: [
     purgecss({
       content: ["./index.html", "./main.js", "./public/**/*.html"],
